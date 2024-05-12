@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  fastapi:
+    build: ./FastAPI
+    command: sh -c "uvicorn app:app --reload --port=8000 --host=0.0.0.0"
+    container_name: fast_api
+    ports: 
+      - '8000:8000'
+  webfunction:
+    build: ./React/qac_frontend
+    container_name: webfunction
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./React/qac_frontend:/app
+    stdin_open: true
+    tty: true
