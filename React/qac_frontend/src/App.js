@@ -33,7 +33,7 @@ function App() {
             type='number'
             value={k}
             onChange={(e) => setK(e.target.value)}
-            placeholder='Enter an integer (k)'
+            placeholder='Enter an integer (n)'
           />
           <button onClick={handleButtonClick}>Get Result</button>
         </div>
