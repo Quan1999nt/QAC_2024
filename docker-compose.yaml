@@ -4,6 +4,8 @@ services:
     build: ./FastAPI
     command: sh -c "uvicorn app:app --reload --port=8000 --host=0.0.0.0"
     container_name: fast_api
+    ports:
+      - '8000:8000'
   webfunction:
     build: ./React/qac_frontend
     container_name: webfunction

@@ -14,7 +14,7 @@ class ResultBase(BaseModel):
     list_nk: List[int]  # Specify the type of elements in the list
     step2: int
 
-origins = ["http://127.0.0.1:3000",]
+origins = ["http://0.0.0.0:3000",]
 
 app.add_middleware(
     CORSMiddleware,
